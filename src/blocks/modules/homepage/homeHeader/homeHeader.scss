@@ -1,0 +1,17 @@
+.homeHeader {
+  padding: 60px 0 16px;
+}
+
+.homeHeader__container {
+  display: flex;
+}
+
+@media all and (max-width: 1024px) {
+  .homeHeader {
+    padding: 20px 0;
+  }
+
+  .homeHeader__container {
+    justify-content: center;
+  }
+}
