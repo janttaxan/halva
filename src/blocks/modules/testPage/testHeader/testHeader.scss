@@ -29,6 +29,16 @@
 .testHeader__link {
   display: flex;
   align-items: center;
+
+  &:hover {
+    .testHeader__linkIcon {
+      transform: translateX(-5px);
+    }
+  }
+}
+
+.testHeader__linkIcon {
+  transition: transform 0.2s;
 }
 
 .testHeader__linkText {

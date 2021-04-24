@@ -18,7 +18,9 @@ export class TestQuestions {
 
     this.btnNext.addEventListener('click', (e) => {
       e.preventDefault();
-      alert(`Ответ №${this.currentValue}`);
+      if (!!this.currentValue) {
+        alert(`Ответ №${this.currentValue}`);
+      }
     });
   }
 }

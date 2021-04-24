@@ -12,6 +12,12 @@
   padding: 17px 30px;
   border-radius: 4px;
   user-select: none;
+
+  &:hover {
+    .baseButton__icon {
+      transform: translateX(5px);
+    }
+  }
 }
 
 .baseButton--onWhite {
@@ -25,11 +31,22 @@
 
 .baseButton--disabled {
   background-color: $grey8C;
+
+  &:hover {
+    .baseButton__icon {
+      transform: unset;
+    }
+  }
 }
 
 .baseButton__text {
   margin-right: 5px;
 }
+
+.baseButton__icon {
+  transition: transform 0.2s;
+}
+
 
 @media all and (max-width: 1024px) {
   .baseButton {
