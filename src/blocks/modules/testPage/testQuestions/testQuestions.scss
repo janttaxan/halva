@@ -1,0 +1,231 @@
+.testQuestions {
+  height: 100%;
+}
+
+.testQuestions__container {
+  display: flex;
+  width: 100%;
+  max-width: unset;
+  padding: 0;
+  height: 100%;
+  min-height: 500px;
+}
+
+.testQuestions__imagePagination,
+.testQuestions__formWrapper {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testQuestions__imagePagination {
+  align-items: center;
+  padding: 10px 0 60px;
+  background-color: #FF3B52;
+  background-image: url("../img/test-page/bg-lines-desktop.svg"), $gradient-primary;
+  background-position: left top;
+  background-size: 100%;
+  background-repeat: repeat-y;
+}
+
+.testQuestions__imageWrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 540px;
+}
+
+.testQuestions__image {
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.testQuestions__paginationWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testQuestions__paginationText {
+  font-size: 18px;
+  line-height: 22px;
+  color: $white;
+  margin: 0 0 20px;
+}
+
+.testQuestions__paginationText--mob {
+  display: none;
+}
+
+.testQuestions__paginationList {
+  display: flex;
+}
+
+.testQuestions__paginationItem {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $white;
+  opacity: 0.3;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.testQuestions__paginationItem--active {
+  opacity: 1;
+}
+
+.testQuestions__formWrapper {
+  padding: 30px 90px 60px;
+}
+
+.testQuestions__form {
+  max-width: 520px;
+}
+
+.testQuestions__formHeading {
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 0 40px;
+}
+
+.testQuestions__answers {
+  margin: 0 0 40px;
+}
+
+.testQuestions__answer {
+  &:not(:last-child) {
+    margin: 0 0 15px;
+  }
+}
+
+.testQuestions__footer {
+  padding: 0;
+
+  .footer__container {
+    padding: 0;
+  }
+
+  .footer__descr {
+    color: $grey8C;
+  }
+
+  .footer__shareItem {
+    &:hover {
+      .footer__shareLink {
+        svg > path {
+          fill: $brand-primary;
+        }
+      }
+    }
+  }
+
+  .footer__shareLink {
+    svg > path {
+      fill: $grey8C;
+    }
+  }
+}
+
+
+@media all and (max-width: 1024px) {
+  .testQuestions {
+    padding: 85px 0 0;
+    height: unset;
+    background-image: url("../img/test-page/bg-lines-mobile.svg"), $gradient-primary;
+    background-position: left top;
+    background-size: 100%;
+    background-repeat: repeat-y;
+  }
+
+  .testQuestions__container {
+    max-width: 600px;
+    flex-direction: column;
+    align-items: center;
+    min-height: unset;
+    padding: 0 20px;
+  }
+
+  .testQuestions__imagePagination,
+  .testQuestions__formWrapper {
+    flex: 0 0 auto;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .testQuestions__imagePagination {
+    flex-direction: column-reverse;
+    padding: 16px 0;
+    background-color: unset;
+    background-image: none;
+  }
+
+  .testQuestions__paginationWrapper {
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 0 15px;
+  }
+
+  .testQuestions__paginationText {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .testQuestions__paginationText--desktop {
+    display: none;
+  }
+
+  .testQuestions__paginationText--mob {
+    display: block;
+
+    span {
+      font-weight: 400;
+      color: rgba($white, 0.7);
+    }
+  }
+
+  .testQuestions__paginationList {
+    display: none;
+  }
+
+  .testQuestions__formWrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .testQuestions__form {
+    max-width: unset;
+    margin: 0 0 30px;
+  }
+
+  .testQuestions__formHeading {
+    color: $white;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 0 30px;
+  }
+
+  .testQuestions__answers {
+    margin: 0 0 30px;
+  }
+
+  .testQuestions__footer {
+    padding: 0 0 20px;
+
+    .footer__descr {
+      color: $white;
+    }
+
+    .footer__shareLink {
+      svg > path {
+        fill: $brand-primary;
+      }
+    }
+  }
+}

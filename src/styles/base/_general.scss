@@ -10,6 +10,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   line-height: 26px;
+  color: $black;
 }
 
 .container {
@@ -54,4 +55,12 @@ img {
 
 ul, ol {
   list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
 }

@@ -11,6 +11,7 @@
   min-width: 240px;
   padding: 17px 30px;
   border-radius: 4px;
+  user-select: none;
 }
 
 .baseButton--onWhite {
@@ -22,6 +23,9 @@
   }
 }
 
+.baseButton--disabled {
+  background-color: $grey8C;
+}
 
 .baseButton__text {
   margin-right: 5px;
@@ -43,6 +47,16 @@
 
     .baseButton__icon > path {
       stroke: $black;
+    }
+  }
+
+  .baseButton--disabled {
+    background-color: $grey8C;
+    color: $white;
+    cursor: not-allowed;
+
+    .baseButton__icon > path {
+      stroke: $white;
     }
   }
 }

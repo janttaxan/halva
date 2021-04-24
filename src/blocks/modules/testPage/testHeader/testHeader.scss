@@ -1,0 +1,94 @@
+.testHeader__container {
+  display: flex;
+  width: 100%;
+  max-width: unset;
+  padding: 0;
+}
+
+.testHeader__logoWrapper,
+.testHeader__linkWrapper {
+  padding: 60px 0 30px;
+  flex: 0 0 50%;
+}
+
+.testHeader__logoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF3B52;
+  background-image: url("../img/test-page/bg-lines-desktop.svg");
+  background-position: left;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.testHeader__linkWrapper {
+  padding-left: 90px;
+}
+
+.testHeader__link {
+  display: flex;
+  align-items: center;
+}
+
+.testHeader__linkText {
+  font-weight: 600;
+  color: $brand-primary;
+  margin-left: 5px;
+}
+
+@media all and (max-width: 1024px) {
+  .testHeader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #FF3B52;
+    background-image: url("../img/test-page/bg-lines-mobile.svg");
+    background-position: left top;
+    background-size: 100%;
+    background-repeat: repeat-y;
+    transition: transform 0.35s;
+  }
+
+  .testHeader--hidden {
+    transform: translateY(-100%);
+  }
+
+  .testHeader--fixed {
+    background-color: rgba($white, 0.5);
+    transform: translateY(0);
+  }
+
+  .testHeader__container {
+    max-width: 600px;
+    padding: 20px;
+    justify-content: space-between;
+  }
+
+  .testHeader__logoWrapper,
+  .testHeader__linkWrapper {
+    padding: 0;
+    flex: 0 0 auto;
+  }
+
+  .testHeader__logoWrapper {
+    background-image: none;
+    background-color: unset;
+  }
+
+  .testHeader__linkWrapper,
+  .testHeader__link {
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .testHeader__linkText {
+    display: none;
+  }
+
+  .testHeader__linkIcon > path {
+    stroke: $white;
+  }
+}

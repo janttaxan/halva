@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
   entry: {
     main: './src/js/index.js',
+    "test-page": './src/js/import/test-page.js',
   },
 
   output: {
@@ -31,7 +32,7 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: require.resolve('babel-loader'),
-          query: {
+          options: {
             presets: [
               ['@babel/preset-env', { modules: false }],
             ],
